@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UploadController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\CategoryController;
+use \App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,8 +38,21 @@ Route::prefix('category')->name('category.')->group(function () {
     Route::get('edit/{id}', [CategoryController::class, 'edit'])->name('edit');
     Route::post('update/{id}', [CategoryController::class, 'update'])->name('update');
 });
+Route::prefix('news')->name('news.')->group(function () {
+    Route::get('', [NewsController::class, 'index'])->name('index');
+    Route::get('create', [NewsController::class, 'create'])->name('create');
+    Route::post('store', [NewsController::class, 'store'])->name('store');
+    Route::get('delete/{id}', [NewsController::class, 'delete'])->name('delete');
+    Route::get('edit/{id}', [NewsController::class, 'edit'])->name('edit');
+    Route::post('update/{id}', [NewsController::class, 'update'])->name('update');
+});
 #Product
 Route::resource('products', ProductController::class);
 #Upload
 Route::post('upload/services',[UploadController::class,'store']);
+/**
+ * CKEditor
+ **/
+Route::post('ckeditor/upload', [\App\Http\Controllers\CKEditorController::class, 'upload'])->name('ckeditor.image-upload');
+
 
