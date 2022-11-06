@@ -45,11 +45,11 @@
                                             </td>
                                             <td>
                                                 <div class="btn-group">
-                                                    <a href="{{url('category/edit/'.$value->id)}}" class="btn btn-icon btn-light btn-hover-success btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Cập nhật">
-                                                        <i class="bi bi-pencil-square "></i> Sửa
+                                                    <a href="{{url('category/edit/'.$value->id)}}" class="btn btn-warning" >
+                                                        Sửa
                                                     </a>
-                                                    <a href="{{url('category/delete/'.$value->id)}}" class="btn btn-delete btn-icon btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Xóa">
-                                                        <i class="bi bi-trash "></i> Xóa
+                                                    <a href="{{url('category/delete/'.$value->id)}}" class="btn btn-danger ml-3" >
+                                                         Xóa
                                                     </a>
                                                 </div>
                                             </td>
@@ -71,22 +71,6 @@
 @endsection
 @section('script')
     <script>
-        $('a.btn-delete').confirm({
-            title: 'Xác nhận!',
-            content: 'Bạn có chắc chắn muốn xóa bản ghi này?',
-            buttons: {
-                ok: {
-                    text: 'Xóa',
-                    btnClass: 'btn-danger',
-                    action: function(){
-                        location.href = this.$target.attr('href');
-                    }
-                },
-                close: {
-                    text: 'Hủy',
-                    action: function () {}
-                }
-            }
-        });
+
     </script>
 @endsection

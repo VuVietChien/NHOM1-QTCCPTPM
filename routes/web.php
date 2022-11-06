@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\UploadController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\CategoryController;
 
@@ -26,6 +28,7 @@ Route::get('/dashboard', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::prefix('category')->name('category.')->group(function () {
     Route::get('', [CategoryController::class, 'index'])->name('index');
     Route::get('create', [CategoryController::class, 'create'])->name('create');
@@ -34,3 +37,8 @@ Route::prefix('category')->name('category.')->group(function () {
     Route::get('edit/{id}', [CategoryController::class, 'edit'])->name('edit');
     Route::post('update/{id}', [CategoryController::class, 'update'])->name('update');
 });
+#Product
+Route::resource('products', ProductController::class);
+#Upload
+Route::post('upload/services',[UploadController::class,'store']);
+
