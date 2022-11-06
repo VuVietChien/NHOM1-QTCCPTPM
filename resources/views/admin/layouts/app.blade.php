@@ -34,6 +34,7 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
       <!-- CSS Files -->
       <link id="pagestyle" href="{{ asset('admin/assets/css/material-dashboard.css?v=3.0.2') }}" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     </head>
 
     <body class="g-sidenav-show  bg-gray-200">
@@ -272,6 +273,10 @@
       <script src="{{ asset('admin/assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
       <script src="{{ asset('admin/assets/js/plugins/smooth-scrollbar.min.js')}}"></script>
       <script src="{{ asset('admin/assets/js/plugins/chartjs.min.js')}}"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
+
       <script>
         var ctx = document.getElementById("chart-bars").getContext("2d");
 
@@ -532,6 +537,10 @@
       <script async defer src="https://buttons.github.io/buttons.js"></script>
       <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
       <script src="{{ asset('admin/assets/js/material-dashboard.min.js?v=3.0.2')}}"></script>
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     </body>
 
     </html>
