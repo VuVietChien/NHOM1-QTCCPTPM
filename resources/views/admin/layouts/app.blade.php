@@ -23,6 +23,20 @@
       <title>
         @yield('title','Dashboard')
       </title>
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
       <!--     Fonts and icons     -->
       <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
       <!-- Nucleo Icons -->
@@ -58,10 +72,10 @@
               </div>
               <ul class="navbar-nav  justify-content-end">
                 <li class="nav-item d-flex align-items-center">
-                  <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
-                    <i class="fa fa-user me-sm-1"></i>
-                    <span class="d-sm-inline d-none">Sign In</span>
-                  </a>
+                  <div>
+                    <ul class="navbar-nav ms-auto">
+                  </ul>
+                  </div>
                 </li>
                 <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
                   <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
