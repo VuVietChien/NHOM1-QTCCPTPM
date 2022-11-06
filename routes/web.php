@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UploadController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SliderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,17 @@ Route::prefix('category')->name('category.')->group(function () {
     Route::get('edit/{id}', [CategoryController::class, 'edit'])->name('edit');
     Route::post('update/{id}', [CategoryController::class, 'update'])->name('update');
 });
+
+#slider
+Route::prefix('slider')->name('slider.')->group(function () {
+    Route::get('', [SliderController::class, 'index'])->name('index');
+    Route::get('create', [SliderController::class, 'create'])->name('create');
+    Route::post('store', [SliderController::class, 'store'])->name('store');
+    Route::get('delete/{id}', [SliderController::class, 'delete'])->name('delete');
+    Route::get('edit/{id}', [SliderController::class, 'edit'])->name('edit');
+    Route::post('update/{id}', [SliderController::class, 'update'])->name('update');
+});
+
 #Product
 Route::resource('products', ProductController::class);
 #Upload
