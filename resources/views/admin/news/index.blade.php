@@ -34,7 +34,7 @@
                                             <th scope="row">{{$key+1}}</th>
                                             <td>{{$value->title}}</td>
                                             <td>
-                                                <img src="{{$value->img}}" width="100px" height="100px" style="object-fit: contain">
+                                                <img src="{{asset($value->img)}}" width="100px" height="100px" style="object-fit: contain">
                                             </td>
                                             <td>
                                                 @if($value->display == 1)
