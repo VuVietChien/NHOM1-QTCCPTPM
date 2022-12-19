@@ -26,6 +26,7 @@ $("#upload").change(function () {
         },
     });
 });
+
 function removeRow(e) {
     e.preventDefault();
     let id = $(this).data("id"); // will return the number 123
@@ -34,7 +35,7 @@ function removeRow(e) {
         $.ajax({
             type: "DELETE",
             url: url,
-            data: { id },
+            data: {id},
             dataType: "JSON",
             success: function (response) {
                 if (response.error === false) {
@@ -47,6 +48,7 @@ function removeRow(e) {
         });
     }
 }
+
 $(document).ready(function () {
     $(document).on("click", "#btnDelete", removeRow);
 });
